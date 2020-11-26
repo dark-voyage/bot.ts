@@ -16,7 +16,7 @@ const greeting = () => (ctx: any) => {
     replyToMessage(
         ctx,
         messageId,
-        `Hello, ${userName} (user_id: ${ctx.from.id})! \n Your Message id is: ${messageId}`
+        `Hello, ${userName} (user_id: ${ctx.from.id})! \n Your Message id is by gen: ${messageId}`
     )
 }
 
