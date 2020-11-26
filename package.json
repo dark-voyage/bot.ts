@@ -1,29 +1,45 @@
 {
-  "name": "telegram-bot-boilerplate-now-serverless-api",
+  "name": "bot.ts",
   "version": "1.0.0",
-  "description": "A template for building Telegram bots with Vercel's Serverless Functions",
+  "description": "Serverless written Telegram Bot Manager",
   "main": "src/index.js",
-  "author": "Stephane Mensah",
-  "homepage": "https://github.com/waptik/telegram-bot-boilerplate-now-serverless-api.git",
+  "author": "Genemator Sakhib <genemators@gmail.com> (https://genemator.me)",
+  "homepage": "github:@genemators/bot.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/api/index.js",
+    "dev": "ts-node api/index.ts",
+    "lint": "eslint ./src --ext .ts",
+    "format": "yarn format:check --write",
+    "format:check": "prettier --config .prettierrc --check \"src/**/*.ts\""
+  },
   "dependencies": {
-    "dotenv-cli": "^2.0.1",
     "telegraf": "^3.38.0"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^0.7.0",
-    "@types/node": "^13.1.4",
-    "@vercel/node": "^1.8.5",
-    "debug": "^4.1.1",
-    "nodemon": "^1.19.1",
-    "prettier": "^1.18.2",
-    "ts-node": "^8.3.0",
-    "tsc-watch": "^4.2.5",
-    "typescript": "^3.8.2"
-  },
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsc-watch --onSuccess \"node ./dist/index.js\" --onFailure \"echo Beep! Compilation Failed\"",
-    "prettier": "prettier --single-quote --trailing-comma all --write 'src/**/*.ts'"
+    "@babel/core": "^7.12.3",
+    "@babel/preset-typescript": "^7.12.1",
+    "@telegraf/core": "^1.1.0",
+    "@types/eslint": "^7.2.4",
+    "@types/node": "^14.14.6",
+    "@types/node-schedule": "^1.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "babel-plugin-add-import-extension": "^1.4.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.0",
+    "standard": "^16.0.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
   }
 }

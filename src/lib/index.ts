@@ -1,7 +1,3 @@
-import startBot, {setWebhook} from './telegram';
+import startBot, { setWebhook } from './telegram'
 
-
-export {
-	startBot,
- setWebhook,
-};
+export { startBot, setWebhook }

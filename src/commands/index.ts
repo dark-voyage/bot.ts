@@ -1,3 +1,3 @@
-import { about } from './about';
+import { about } from './about'
 
-export { about };
+export { about }

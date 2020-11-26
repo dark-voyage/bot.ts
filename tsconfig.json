@@ -1,7 +1,21 @@
 {
- 	"extends": "@sindresorhus/tsconfig",
- 	"include": [ 		"api" 	], 	"compilerOptions": {
- 		"outDir": "dist",
- 		"strict":false, 		"strictNullChecks":false, 		"sourceMap": true
- 	}
- }
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"allowJs": true,
+		"module": "CommonJS",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": false,
+		"esModuleInterop": true,
+		"target": "ES5",
+		"sourceMap": true,
+		"moduleResolution": "Node",
+		"outDir": "dist",
+		"baseUrl": ".",
+		"skipLibCheck": true,
+	},
+	"include": [
+		"src/**/*",
+		"api"
+	]
+}

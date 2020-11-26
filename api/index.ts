@@ -1,53 +1,31 @@
-import {NowRequest, NowResponse} from '@vercel/node';
 import Telegraf from 'telegraf';
-
+import { TelegrafContext } from 'telegraf/typings/context'
 import { about, greeting } from '../src';
- import {ok} from '../src/lib/responses';
-import {
-startBot,
-setWebhook,
-} from '../src/lib';
+import { ok } from '../src/lib/responses';
+import { startBot, setWebhook } from '../src/lib';
+import { NowRequest, NowResponse } from '@vercel/node';
+
+export const bot = new Telegraf<TelegrafContext>(process.env.BOT_TOKEN);
+
+bot
+	.start((ctx => ctx.reply('This is a test bot.')))
+	.command('about', about())
+	.on('text', greeting())
 
 
-
-const BOT_TOKEN = process.env.BOT_TOKEN;
-
-
-const bot = new Telegraf(BOT_TOKEN);
-
-bot.use(Telegraf.log());
-
-bot.start((ctx) => {
-  return ctx.reply('This is a test bot.');
-});
-
-bot.command('about', about())
-.on('text', greeting());
-
-
-// process.env.IS_NOW is undefined locally,
-if (!process.env.IS_NOW) {
+if (!process.env.IS_NOW)
 	startBot(bot).then(() => {
 		console.info('Started bot');
 	});
-  }
 
-
-// main function
- export default async function handle(req: NowRequest, res: NowResponse) {
+export default async (req: NowRequest, res: NowResponse) => {
 await setWebhook(bot)
 
 	if (!req.body) {
-
-	ok(res,'Nothing to see here...');
-		return;
-	};
- 
-
-	console.log('Server has initialized bot with req.body ', req.body);
-
-		// info: set webhook in order for `bot​.​handleUpdate` to work
-return​ ​bot​.​handleUpdate​(​req​.​body​,​ ​res​)​;​
+		ok(res,'Nothing to see here...');
+			return;
+	}
+	return bot.handleUpdate(req.body, res)
 
 }
 
