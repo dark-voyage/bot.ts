@@ -1,5 +1,0 @@
-import "./admin/index"
-import "./inline/index"
-import "./actions/index"
-import "./middlewares/index"
-import "./exclude/index"

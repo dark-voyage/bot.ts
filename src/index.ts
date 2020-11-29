@@ -1,1 +1,1 @@
-import "./action/index"
+export * from './actions';

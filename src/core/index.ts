@@ -1,2 +1,1 @@
-import './env'
-import './bot'
+export * from './telegram';

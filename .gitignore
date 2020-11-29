@@ -2,21 +2,22 @@
 
 # dependencies
 /node_modules
-
+.idea
 # testing
 /coverage
 
 # production
 /build
 /dist
-/src/lib/mo*
-/src/lib/db*
-/src/lib/up*
+/src/core/mo*
+/src/core/db*
+/src/core/up*
 /api/_index.ts
+public/
 
 # misc
 .DS_Store
-.env*
+.env
 yarn.*
 # !.env-sample
 x*
@@ -26,4 +27,3 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
-.idea
