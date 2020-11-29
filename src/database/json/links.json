@@ -1,0 +1,36 @@
+{
+	"links": [
+		{
+			"name": "Facebook",
+			"url": "https://facebook.com/sakhib.orzklv"
+		},
+		{
+			"name": "Instagram",
+			"url": "https://instagram.com/genemator"
+		},
+		{
+			"name": "Twitter",
+			"url": "https://twitter.com/genemator"
+		},
+		{
+			"name": "Twitch",
+			"url": "https://twitch.tv/genemators"
+		},
+		{
+			"name": "VKontakte",
+			"url": "https://vk.com/genemator"
+		},
+		{
+			"name": "Telegram",
+			"url": "https://t.me/genemators"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/genemators"
+		},
+		{
+			"name": "Steam",
+			"url": "https://steamcommunity.com/id/genemator"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+require("./help");
+require("./join");
+require("./start");
+require("./check");
+require("./student");
+require("./stats");
+require("./links");
+require("./stream");
+require("./feedback");
+require("./minecraft");

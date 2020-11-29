@@ -1,2 +1,1 @@
-export * from './commands'
-export * from './text'
+import "./action/index"
