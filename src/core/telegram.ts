@@ -3,6 +3,7 @@ import Telegraf from 'telegraf';
 import { ok } from './responses';
 import { NowRequest, NowResponse } from '@vercel/node';
 import { TelegrafContext } from '../types/telegraf';
+import { inline } from '../actions/inline';
 
 const isDev = process.env.DEV;
 const VERCEL_URL = process.env.VERCEL_URL;
@@ -23,6 +24,9 @@ let botUtils = async () => {
 
 	// Links
 	bot.command('links', async (ctx: TelegrafContext) => await links(ctx));
+
+	// Inline
+	bot.on('inline_query', async (ctx: TelegrafContext) => await inline(ctx));
 };
 
 let localBot = async () => {

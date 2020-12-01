@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
 export default async function (link): Promise<any> {
-	return axios
+	return await axios
 		.get(link)
 		.then((response: AxiosResponse) => {
 			return response.data;
