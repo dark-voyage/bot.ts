@@ -11,4 +11,18 @@ const help = async (ctx: TelegrafContext) => {
 	});
 };
 
-export { help };
+const helpAction = async (ctx: TelegrafContext) => {
+	await ctx.editMessageMedia(
+		{
+			type: 'animation',
+			media: gifs.help,
+			caption: message.help,
+		},
+		{
+			parse_mode: 'HTML',
+			reply_markup: keyboard.help,
+		},
+	);
+};
+
+export { help, helpAction };
