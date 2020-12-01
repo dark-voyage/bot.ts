@@ -1,4 +1,4 @@
-import { Markup, Extra } from 'telegraf';
+import { Markup } from 'telegraf';
 
 export const start = Markup.inlineKeyboard([[Markup.callbackButton('Show detailed information', 'help')]]);
 
