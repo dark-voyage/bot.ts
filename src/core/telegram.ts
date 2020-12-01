@@ -12,9 +12,8 @@ export const bot = new Telegraf<TelegrafContext>(BOT_TOKEN);
 
 let botUtils = async () => {
 	bot.start(async (ctx: TelegrafContext) => await start(ctx));
-	bot
-		.help(async (ctx: TelegrafContext) => await help(ctx))
-		.action('help', async (ctx: TelegrafContext) => await helpAction(ctx));
+	bot.help(async (ctx: TelegrafContext) => await help(ctx));
+	bot.action('help', async (ctx: TelegrafContext) => await helpAction(ctx));
 	bot.command('stream', async (ctx: TelegrafContext) => await stream(ctx));
 	bot.command('links', async (ctx: TelegrafContext) => await links(ctx));
 };
