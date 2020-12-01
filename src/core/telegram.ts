@@ -1,8 +1,8 @@
-import { about } from '..';
+import { about, help, start, links, stream } from '..';
 import Telegraf from 'telegraf';
 import { ok } from './responses';
 import { NowRequest, NowResponse } from '@vercel/node';
-import { TelegrafContext } from 'telegraf/typings/context';
+import { TelegrafContext } from '../types/telegraf';
 
 const isDev = process.env.DEV;
 const VERCEL_URL = process.env.VERCEL_URL;
@@ -11,10 +11,11 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 export const bot = new Telegraf<TelegrafContext>(BOT_TOKEN);
 
 let botUtils = async () => {
-	bot.start((ctx) => {
-		return ctx.reply('This is a test bot.');
-	});
+	bot.start(async (ctx: TelegrafContext) => await start(ctx));
+	bot.help(async (ctx: TelegrafContext) => await help(ctx));
 	bot.command('about', about());
+	bot.command('stream', async (ctx: TelegrafContext) => await stream(ctx))
+	bot.command('links', async (ctx: TelegrafContext) => await links(ctx))
 };
 
 let localBot = async () => {
