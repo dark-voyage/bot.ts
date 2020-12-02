@@ -1,7 +1,7 @@
 import { TelegrafContext } from '../types/telegraf';
 import { Markup } from 'telegraf';
 
-const linkGIF = "https://genemator.me/gifs/links.gif"
+const linkGIF = 'https://genemator.me/gifs/links.gif';
 
 const links = async (ctx: TelegrafContext) => {
 	const links = [
