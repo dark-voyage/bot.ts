@@ -1,9 +1,8 @@
-import { help, start, links, stream, helpAction } from '..';
+import { start, help, helpAction, links, inline } from '..';
 import Telegraf from 'telegraf';
 import { ok } from './responses';
 import { NowRequest, NowResponse } from '@vercel/node';
 import { TelegrafContext } from '../types/telegraf';
-import { inline } from '../actions/inline';
 
 const isDev = process.env.DEV;
 const VERCEL_URL = process.env.VERCEL_URL;
@@ -18,9 +17,6 @@ let botUtils = async () => {
 	// Help
 	bot.help(async (ctx: TelegrafContext) => await help(ctx));
 	bot.action('help', async (ctx: TelegrafContext) => await helpAction(ctx));
-
-	// Stream
-	bot.command('stream', async (ctx: TelegrafContext) => await stream(ctx));
 
 	// Links
 	bot.command('links', async (ctx: TelegrafContext) => await links(ctx));
