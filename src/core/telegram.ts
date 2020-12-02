@@ -11,17 +11,10 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 export const bot = new Telegraf<TelegrafContext>(BOT_TOKEN);
 
 let botUtils = async () => {
-	// Start
 	bot.start(async (ctx: TelegrafContext) => await start(ctx));
-
-	// Help
 	bot.help(async (ctx: TelegrafContext) => await help(ctx));
 	bot.action('help', async (ctx: TelegrafContext) => await helpAction(ctx));
-
-	// Links
 	bot.command('links', async (ctx: TelegrafContext) => await links(ctx));
-
-	// Inline
 	bot.on('inline_query', async (ctx: TelegrafContext) => await inline(ctx));
 };
 
