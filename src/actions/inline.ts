@@ -4,7 +4,7 @@ import { TelegrafContext } from '../types/telegraf';
 import { Markup } from 'telegraf';
 
 const base = 'https://github.com/genemators/';
-const thumb = 'https://genemator.me/favicon.png';
+const thumb = 'https://genemator.uz/favicon.png';
 const inlineMessage = (data) =>
 	`<b><a href="${data['html_url']}">〰 GitHub Project Review 〰</a></b>` +
 	`\n` +

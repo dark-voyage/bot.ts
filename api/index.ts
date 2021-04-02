@@ -7,7 +7,7 @@ export default async function handle(req: NowRequest, res: NowResponse) {
 	} catch (e) {
 		res.statusCode = 500;
 		res.setHeader("Content-Type", "text/html");
-		res.redirect("https://genemator.me");
+		res.redirect("https://genemator.uz");
 		console.error(e.message);
 	}
 }

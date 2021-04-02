@@ -2,7 +2,7 @@ import { TelegrafContext } from '../types/telegraf';
 import { Markup } from 'telegraf';
 
 const start = async (ctx: TelegrafContext) => {
-	await ctx.replyWithAnimation('https://genemator.me/gifs/start.gif', {
+	await ctx.replyWithAnimation('https://genemator.uz/gifs/start.gif', {
 		parse_mode: 'HTML',
 		caption:
 			`<b>Welcome to Genemator's Assistant!</b>` +

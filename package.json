@@ -4,7 +4,7 @@
 	"description": "Genemator Sakhib's Serverless Telegram Bot",
 	"main": "api/index.ts",
 	"author": "Genemator Sakhib",
-	"homepage": "https://genemator.me",
+	"homepage": "https://genemator.uz",
 	"scripts": {
 		"dev": "dotenv -- nodemon -e ts -x ts-node src/core/telegram.ts",
 		"prettier": "prettier --single-quote --trailing-comma all --write 'src/**/*.ts'"

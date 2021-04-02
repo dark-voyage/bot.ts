@@ -38,7 +38,7 @@ const helpText =
 	`<i>In order to use our inline mode, switch to inline mode ` +
 	`by typing: @genemabot and then start typing something there.</i>`;
 
-const helpGIF = 'https://genemator.me/gifs/help.gif';
+const helpGIF = 'https://genemator.uz/gifs/help.gif';
 const helpKeyboard = Markup.inlineKeyboard([[Markup.switchToCurrentChatButton('Search Projects', '')]]);
 
 const help = async (ctx: TelegrafContext) => {
